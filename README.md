@@ -5,7 +5,6 @@
 </p>
 
 <p align="center">
-
   <a href="https://github.com/aqsak-dev99/portfolio_website"><img src="https://img.shields.io/github/repo-size/aqsak-dev99/portfolio_website?color=8fbc8f&style=flat-square"></a>
   <a href="https://vercel.com"><img src="https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel"></a>
   <a href="#"><img src="https://img.shields.io/badge/Status-Live-brightgreen?style=flat-square"></a>
