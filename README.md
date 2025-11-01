@@ -1,49 +1,97 @@
-# Aqsa Khan — Developer Portfolio (Express + EJS)
+<h1 align="center">✨ Aqsa Khan — Developer Portfolio</h1>
 
-High-end, dark-themed portfolio showcasing skills, services, and 8 featured projects. Built with Express.js, EJS, and modern frontend (HTML5, CSS3, JS) using AOS animations.
+<p align="center">
+  <em>A modern, minimal, and expressive portfolio website — built to tell my story and showcase my work with elegance.</em>
+</p>
 
-## Getting Started
+<p align="center">
+  <a href="https://github.com/aqsak-dev99/portfolio_website/stargazers"><img src="https://img.shields.io/github/stars/aqsak-dev99/portfolio_website?color=ffb6c1&style=flat-square"></a>
+  <a href="https://github.com/aqsak-dev99/portfolio_website"><img src="https://img.shields.io/github/repo-size/aqsak-dev99/portfolio_website?color=8fbc8f&style=flat-square"></a>
+  <a href="https://vercel.com"><img src="https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Status-Live-brightgreen?style=flat-square"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4-pink?style=flat-square"></a>
+</p>
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Configure environment:
-   - Copy `.env.example` to `.env` and set SMTP credentials for contact form.
-3. Run locally:
-   ```bash
-   npm run dev
-   # opens http://localhost:3000
-   ```
+---
 
-## Project Structure
+## 🪞 Overview
 
-- `server.js` – Express app setup
-- `views/` – EJS templates
-  - `partials/` – head, navbar, footer
-  - pages: home, about, projects, services, contact, project-detail, 404
-- `public/` – static assets (css, js, resume)
-- `src/routes/` – page and API routes
-- `src/controllers/` – site data and contact controller
+Welcome to my **Portfolio Website** — a personal space where I share my journey as a developer, designer, and creative thinker.  
+It’s responsive, fast, and visually refined — designed to reflect not just my work, but my personality, values, and growth.
 
-## Environment Variables
+> 💡 “Your portfolio is your silent ambassador — let it speak beautifully.”
 
-See `.env.example` for all variables. On Render, define these in the “Environment” section of the service.
+---
 
-## Deploy on Render
+## 🧩 Features
 
-1. Create a new Web Service in Render.
-2. Connect your repository and select this project.
-3. Set build command:
-   - No build step needed; Render will run `npm install` automatically.
-4. Set start command:
-   ```
-   node server.js
-   ```
-5. Add environment variables (SMTP settings and optional `PORT` if needed). Render sets `PORT` automatically.
-6. Deploy. The site will be available at your Render URL.
+- 💼 Clean and professional layout  
+- 📱 Fully responsive design (mobile + desktop)  
+- ⚡ Fast load times with optimized assets  
+- 📬 Functional contact form via **Formspree**  
+- 🌙 Deployed seamlessly on **Vercel**  
+- 🧠 Organized project and component structure  
 
-## Notes
+---
 
-- If SMTP is not configured, the contact route logs the message in dev mode.
-- Replace `/public/resume/aqsa-khan-resume.pdf` with your actual PDF.# portfolio_website
+## 🛠️ Tech Stack
+
+| Category | Tools & Technologies |
+|-----------|----------------------|
+| **Frontend** | HTML5, CSS3, JavaScript (ES6+), EJS Templates |
+| **Backend** | Node.js, Express.js |
+| **Forms** | Formspree (Email Handling) |
+| **Hosting** | Vercel (Serverless Deployment) |
+| **Version Control** | Git & GitHub |
+
+---
+
+## 🗂️ Folder Structure
+
+portfolio_website/
+│
+├── public/ # Images, CSS, favicon, resume, etc.
+├── views/ # EJS templates / HTML pages
+├── api/ # Serverless route (for Vercel)
+├── app.js # Express configuration
+├── server.js # Local server entry point
+├── vercel.json # Deployment configuration
+├── package.json # Project dependencies
+└── README.md # You're reading it :)
+
+
+
+---
+
+## ⚙️ Local Setup
+
+1️⃣ Clone the repository:
+```bash
+git clone https://github.com/aqsak-dev99/portfolio_website.git
+cd portfolio_website
+2️⃣ Install dependencies:
+
+bash
+Copy code
+npm install
+3️⃣ Run locally:
+
+bash
+Copy code
+npm start
+Then visit 👉 http://localhost:3000
+
+🚀 Deployment
+This project is deployed using Vercel.
+Automatic redeploys are enabled — every push to main instantly updates the live site.
+
+🔗 Live Demo:
+https://portfolio-website.vercel.app
+
+💌 Contact
+📮 Let’s Connect
+Feel free to reach out for collaborations, freelance work, or creative discussions.
+Use the contact form on my website — powered by Formspree — or reach me directly via GitHub.
+
+🌐 Website
+💻 GitHub
