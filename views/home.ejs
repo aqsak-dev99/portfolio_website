@@ -1,0 +1,60 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main>
+  <section class="hero" data-aos="fade-up">
+    <div class="container">
+      <h1 class="glow">Hi, I'm <span><%= site.name %></span></h1>
+      <p class="subtitle"><%= site.title %></p>
+      <p class="bio"><%= site.bio %></p>
+      <div class="cta">
+        <a href="/projects" class="btn btn-primary">View Projects</a>
+        <a href="/contact" class="btn btn-outline">Contact Me</a>
+        <a href="/resume/aqsa-khan-resume.pdf" class="btn btn-outline" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-preview" data-aos="fade-up">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="badges">
+        <% site.skills.forEach(function(skill) { %>
+          <span class="badge"><%= skill %></span>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-projects" data-aos="fade-up">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <% site.projects.slice(0,4).forEach(function(p) { %>
+          <article class="card">
+            <img src="<%= p.image %>" alt="<%= p.title %>" />
+            <div class="card-body">
+              <h3><%= p.title %></h3>
+              <p><%= p.description %></p>
+              <div class="tech">
+                <% p.tech.slice(0,3).forEach(function(t){ %>
+                  <span class="chip"><%= t %></span>
+                <% }) %>
+              </div>
+              <div class="actions">
+                <a href="/project/<%= p.id %>" class="btn btn-primary">Details</a>
+                <a href="<%= p.github %>" target="_blank" class="btn btn-outline">GitHub</a>
+                <a href="<%= p.live %>" target="_blank" class="btn btn-outline">Live</a>
+              </div>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+      <div class="center">
+        <a href="/projects" class="btn btn-primary">See All Projects</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

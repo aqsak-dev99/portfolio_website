@@ -1,0 +1,71 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main>
+  <section class="projects" data-aos="fade-up">
+    <div class="container">
+      <h1>Projects</h1>
+      <div id="projectsGrid" class="grid" data-hydrate="projects">
+        <% site.projects.forEach(function(p) { %>
+          <article class="card">
+            <img src="<%= p.image %>" alt="<%= p.title %>" loading="lazy" />
+            <div class="card-body">
+              <h3><%= p.title %></h3>
+              <p><%= p.description %></p>
+              <div class="tech">
+                <% p.tech.forEach(function(t){ %>
+                  <span class="chip"><%= t %></span>
+                <% }) %>
+              </div>
+              <div class="actions">
+                <a href="/project/<%= p.id %>" class="btn btn-primary">Details</a>
+                <a href="<%= p.github %>" target="_blank" class="btn btn-outline">GitHub</a>
+                <a href="<%= p.live %>" target="_blank" class="btn btn-outline">Live</a>
+              </div>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  
+  <section class="testimonials" data-aos="fade-up">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <div class="t-grid">
+        <article class="t-card">
+          <div class="t-header">
+            <img class="avatar" src="https://placehold.co/80x80?text=AB" alt="Client avatar" loading="lazy" />
+            <div>
+              <h3 class="t-name">Alex Brown</h3>
+              <p class="muted">Startup Founder</p>
+            </div>
+          </div>
+          <p class="t-text">“Aqsa delivered beyond expectations — clean code, great communication, and on-time delivery.”</p>
+        </article>
+        <article class="t-card">
+          <div class="t-header">
+            <img class="avatar" src="https://placehold.co/80x80?text=JS" alt="Client avatar" loading="lazy" />
+            <div>
+              <h3 class="t-name">Jordan Smith</h3>
+              <p class="muted">Product Manager</p>
+            </div>
+          </div>
+          <p class="t-text">“Professional and proactive. The UI feels modern and responsive across devices.”</p>
+        </article>
+        <article class="t-card">
+          <div class="t-header">
+            <img class="avatar" src="https://placehold.co/80x80?text=RD" alt="Client avatar" loading="lazy" />
+            <div>
+              <h3 class="t-name">Riya Das</h3>
+              <p class="muted">Tech Lead</p>
+            </div>
+          </div>
+          <p class="t-text">“Smooth collaboration and attention to detail. Highly recommend working with Aqsa.”</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

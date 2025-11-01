@@ -1,0 +1,56 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main>
+  <section class="about" data-aos="fade-up">
+    <div class="container">
+      <h1>About Me</h1>
+      <p class="bio-lg"><%= site.bio %></p>
+    </div>
+  </section>
+
+  <section class="skills" data-aos="fade-up">
+    <div class="container">
+      <h2>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <% site.skills.forEach(function(skill, i) { %>
+          <div class="skill">
+            <div class="skill-head">
+              <span><%= skill %></span>
+              <span class="percent"><%= (60 + (i*4 % 35)) + '%' %></span>
+            </div>
+            <div class="bar"><span style="width: <%= (60 + (i*4 % 35)) + '%' %>"></span></div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="certificates" data-aos="fade-up">
+    <div class="container">
+      <h2>Certificates & Achievements</h2>
+      <div id="certGrid" class="grid" data-hydrate="certificates">
+        <% site.certificates.forEach(function(c){ %>
+          <article class="card">
+            <img src="<%= c.image %>" alt="<%= c.title %>" loading="lazy" />
+            <div class="card-body">
+              <h3><%= c.title %></h3>
+              <p class="muted"><%= c.issuer %> — <%= new Date(c.date).toLocaleDateString() %></p>
+              <% if (c.verifyLink) { %>
+                <a href="<%= c.verifyLink %>" target="_blank" class="btn btn-outline">Verify</a>
+              <% } %>
+              <% if (c.hours) { %>
+                <div class="tags" style="margin-top:10px">
+                  <span class="chip"><%= c.hours %></span>
+                  <span class="chip"><%= c.issuer %></span>
+                </div>
+              <% } %>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

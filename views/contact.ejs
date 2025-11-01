@@ -1,0 +1,38 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main class="contact-page">
+  <section class="contact" data-aos="fade-up">
+    <div class="container" style="max-width:800px">
+      <h1>Contact</h1>
+      <p class="muted" style="margin-top:8px">Send me a message — I’ll reply shortly.</p>
+      <article class="card" style="margin-top:16px">
+        <div class="card-body">
+          <form id="contactForm" action="https://formspree.io/f/mgvppvog" method="POST" class="form">
+            <div class="grid form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+            <p id="formStatus" class="status" aria-live="polite"></p>
+          </form>
+          <div class="muted" style="margin-top:12px">
+            Or connect via <a href="<%= site.social.linkedin %>" target="_blank">LinkedIn</a> or <a href="mailto:<%= site.social.email %>">Email</a>.
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

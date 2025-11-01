@@ -1,0 +1,267 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<main>
+  <section class="services" data-aos="fade-up">
+    <div class="container">
+      <h1>Services</h1>
+      <div class="grid services-grid">
+        <% site.services.forEach(function(s){ %>
+          <article class="card service-card">
+            <div class="icon">💡</div>
+            <div class="card-body">
+              <h3><%= s.title %></h3>
+              <p><%= s.description %></p>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- New: Services & Packages Section -->
+  <section class="svc-packages" data-aos="fade-up">
+    <div class="container">
+      <h2>Services & Packages</h2>
+
+      <h3 class="subhead">Web Development Packages</h3>
+      <div class="grid pkg-grid" id="webDevGrid">
+        <!-- Basic -->
+        <article class="card pkg-card">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop" alt="Basic package" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head">
+              <h3>Basic</h3>
+              <span class="price">$50–$80</span>
+            </div>
+            <p class="muted">Delivery: 3 days · Revisions: 2</p>
+            <details class="pkg-details">
+              <summary>Show features</summary>
+              <ul class="features">
+                <li>Static Website / Landing Page (1–3 sections)</li>
+                <li>Responsive layout</li>
+                <li>HTML/CSS/JS or React</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+        <!-- Standard -->
+        <article class="card pkg-card">
+          <img src="https://images.unsplash.com/photo-1524646432681-03868f1e43f3?w=1200&q=80&auto=format&fit=crop" alt="Standard package" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head">
+              <h3>Standard</h3>
+              <span class="price">$120–$180</span>
+            </div>
+            <p class="muted">Delivery: 5 days · Revisions: 3</p>
+            <details class="pkg-details">
+              <summary>Show features</summary>
+              <ul class="features">
+                <li>Dynamic / Multi-page Website</li>
+                <li>Portfolio, galleries, animations</li>
+                <li>Contact form integration</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+        <!-- Premium -->
+        <article class="card pkg-card">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2c6d63c?w=1200&q=80&auto=format&fit=crop" alt="Premium package" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head">
+              <h3>Premium</h3>
+              <span class="price">$250–$350</span>
+            </div>
+            <p class="muted">Delivery: 7–10 days · Revisions: 5</p>
+            <details class="pkg-details">
+              <summary>Show features</summary>
+              <ul class="features">
+                <li>Full-Stack Web App (React + Node.js + MySQL)</li>
+                <li>Backend integration & authentication</li>
+                <li>Admin panel & dashboard</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+      </div>
+      <div class="center" style="margin-top:12px">
+        <button class="btn btn-primary" id="inquireWebDev">Inquire / Customize</button>
+      </div>
+
+      <h3 class="subhead">Python Automation Services</h3>
+      <div class="grid svc-grid" id="automationGrid">
+        <!-- CSV Cleaner -->
+        <article class="card svc-card">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80&auto=format&fit=crop" alt="CSV cleaner" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head"><h3>CSV Cleaner Automation</h3><span class="price">$15–$25</span></div>
+            <p class="muted">Delivery: 1–2 days · Revisions: 2</p>
+            <details class="pkg-details">
+              <summary>Show features</summary>
+              <ul class="features">
+                <li>Cleans and standardizes CSV files</li>
+                <li>Batch processing & local output</li>
+                <li>No heavy dependencies</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+        <!-- File Organizer -->
+        <article class="card svc-card">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&q=80&auto=format&fit=crop" alt="File organizer" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head"><h3>File Organizer Automation</h3><span class="price">$15–$25</span></div>
+            <p class="muted">Delivery: 1–2 days · Revisions: 2</p>
+            <details class="pkg-details">
+              <summary>Show features</summary>
+              <ul class="features">
+                <li>Automatically categorizes files into folders</li>
+                <li>Configurable rules and extensions</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+        <!-- Smart Email Generator -->
+        <article class="card svc-card">
+          <img src="https://images.unsplash.com/photo-1507209696998-3c532be9b2b1?w=1200&q=80&auto=format&fit=crop" alt="Smart email generator" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head"><h3>Smart Email Generator</h3><span class="price">$20–$30</span></div>
+            <p class="muted">Delivery: 1–2 days · Revisions: 2</p>
+            <details class="pkg-details">
+              <summary>Show features</summary>
+              <ul class="features">
+                <li>Template-driven professional emails</li>
+                <li>Customizable placeholders</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+        <!-- Full Automation Bundle -->
+        <article class="card svc-card">
+          <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=1200&q=80&auto=format&fit=crop" alt="Automation bundle" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head"><h3>Full Automation Bundle</h3><span class="price">$50–$80</span></div>
+            <p class="muted">Delivery: 3–4 days · Revisions: 3</p>
+            <details class="pkg-details">
+              <summary>Show included tools</summary>
+              <ul class="features">
+                <li>CSV Cleaner</li>
+                <li>File Organizer</li>
+                <li>Smart Email Generator</li>
+                <li>Client-customized workflow</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+      </div>
+      <div class="center" style="margin-top:12px">
+        <button class="btn btn-primary" id="inquireAutomation">Inquire / Customize</button>
+      </div>
+
+      <h3 class="subhead">Single-Page / Static Projects</h3>
+      <div class="grid proj-grid" id="projectsGridSvc">
+        <!-- Product Survey Form -->
+        <article class="card proj-card">
+          <img src="https://images.unsplash.com/photo-1545665277-5937489579d1?w=1200&q=80&auto=format&fit=crop" alt="Product Survey Form" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head"><h3>Product Survey Form</h3><span class="price">$10–$20</span></div>
+            <details class="pkg-details">
+              <summary>Project overview</summary>
+              <p>Responsive, interactive form with real-time validation, counters, and glassmorphism.</p>
+            </details>
+          </div>
+        </article>
+        <!-- PixelPulse Media -->
+        <article class="card proj-card">
+          <img src="https://images.unsplash.com/photo-1533130061792-64b345e4aa1b?w=1200&q=80&auto=format&fit=crop" alt="PixelPulse Media" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head"><h3>PixelPulse Media</h3><span class="price">$40–$60</span></div>
+            <details class="pkg-details">
+              <summary>Project overview</summary>
+              <p>Glassmorphic digital agency landing with smooth scroll, animated icons, and testimonials.</p>
+            </details>
+          </div>
+        </article>
+        <!-- Wanderlust Journeys -->
+        <article class="card proj-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80&auto=format&fit=crop" alt="Wanderlust Journeys" loading="lazy" />
+          <div class="card-body">
+            <div class="pkg-head"><h3>Wanderlust Journeys</h3><span class="price">$50–$70</span></div>
+            <details class="pkg-details">
+              <summary>Project overview</summary>
+              <p>High-converting travel landing with Bootstrap 5, responsive layout, and carousel galleries.</p>
+            </details>
+          </div>
+        </article>
+      </div>
+      <div class="center" style="margin-top:12px">
+        <button class="btn btn-primary" id="inquireProjects">Inquire / Customize</button>
+      </div>
+
+      <!-- Inquiry / Customize Modal -->
+      <div id="svcModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="svcModalTitle">
+        <div class="modal-content">
+          <button class="modal-close" id="svcModalClose" aria-label="Close">×</button>
+          <h3 id="svcModalTitle">Inquire / Customize</h3>
+          <p class="muted">Selected Package(s):</p>
+          <div id="svcSelectedList" class="tags" style="margin-bottom:12px"></div>
+          <form id="svcInquiryForm" action="https://formspree.io/f/mgvppvog" method="POST">
+            <div class="grid form-grid">
+              <div class="field">
+                <label for="svcNameM">Name</label>
+                <input type="text" id="svcNameM" name="name" required />
+              </div>
+              <div class="field">
+                <label for="svcEmailM">Email</label>
+                <input type="email" id="svcEmailM" name="email" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="svcMessageM">Customization / Message</label>
+              <textarea id="svcMessageM" name="message" rows="5" required></textarea>
+            </div>
+            <input type="hidden" id="svcPackagesM" name="packages" />
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            <p id="svcModalStatus" class="status" aria-live="polite"></p>
+          </form>
+          <p class="muted" style="margin-top:8px">Note: Replace the Formspree action URL with your form ID.</p>
+        </div>
+      </div>
+
+      <!-- Contact form moved to Contact page -->
+
+    </div>
+  </section>
+
+  <section class="gig" data-aos="fade-up">
+    <div class="container">
+      <h2>Featured Gig</h2>
+      <article class="card">
+        <div class="card-body">
+          <h3><%= site.gig.title %></h3>
+          <p class="muted"><%= site.gig.overview %></p>
+          <h4 style="margin-top:12px">Packages</h4>
+          <div class="grid packages">
+            <% site.gig.packages.forEach(function(pkg){ %>
+              <article class="card pkg-card">
+                <div class="card-body">
+                  <h3><%= pkg.name %></h3>
+                  <p><%= pkg.summary %></p>
+                  <p class="muted">Delivery: <%= pkg.delivery %> · Revisions: <%= pkg.revisions %></p>
+                </div>
+              </article>
+            <% }) %>
+          </div>
+          <h4 style="margin-top:12px">Tags</h4>
+          <div class="tags">
+            <% site.gig.tags.forEach(function(tag){ %>
+              <span class="chip"><%= tag %></span>
+            <% }) %>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
