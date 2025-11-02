@@ -38,7 +38,7 @@ app.use((req, res) => {
   res.status(404).render('404', {
     pageTitle: 'Page Not Found',
     pageDescription: 'The page you requested could not be found.',
-    ogImage: 'https://images.unsplash.com/photo-1517519014922-8fc07a1f0f59?w=1200&q=80&auto=format&fit=crop',
+    ogImage: '/images/packages.jpg',
     ogUrl: req.protocol + '://' + req.get('host') + req.originalUrl,
   });
 });

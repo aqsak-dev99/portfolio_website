@@ -209,7 +209,7 @@ Let's build something amazing together!`,
       issuer: 'freeCodeCamp',
       date: '2025-08-22',
       hours: '~300 hours',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop',
+      image: '/images/packages.jpg',
       verifyLink: 'https://freecodecamp.org/certification/aqsa_khan/responsive-web-design'
     },
     {
@@ -218,7 +218,7 @@ Let's build something amazing together!`,
       issuer: 'freeCodeCamp',
       date: '2025-10-24',
       hours: '~300 hours',
-      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop',
+      image: '/images/packages.jpg',
       verifyLink: 'https://freecodecamp.org/certification/aqsakhan_/scientific-computing-with-python-v7'
     },
   ],
